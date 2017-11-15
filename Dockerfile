@@ -5,9 +5,9 @@ ENV BTC_GUI_DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-0.15.1/bitcoin-${B
 COPY local-entrypoint.sh /
 
 RUN apt-get update && \
-    apt-get install -y curl zip libfontconfig1 libfreetype6 && \
+    apt-get install -y curl zip libfontconfig1 libfreetype6 \
+                       libegl1-mesa libgl1-mesa-glx && \
     apt-get clean && \
-    useradd -ms /bin/bash -G xpra user && \
     chmod 755 /local-entrypoint.sh
 
 USER user
