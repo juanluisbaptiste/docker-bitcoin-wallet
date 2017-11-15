@@ -1,7 +1,7 @@
+bitcoin-wallet
+# Unofficial Bitcoin core wallet GUI for docker
 
-# Unofficial Bitcoin ABC wallet GUI for docker
-
-Unofficial [bitcoin ABC](http://www.bitcoinabc.org/) wallet GUI docker image to be run standalone or inside a browser window using [Xpra](https://www.xpra.org/). This wallet can be used to access [Bitcoin Cash](https://www.bitcoincash.org/) coins.
+Unofficial [bitcoin core](http://www.bitcoincore.org/) wallet GUI docker image to be run standalone or inside a browser window using [Xpra](https://www.xpra.org/).
 
 Having the wallet available as docker container has some advantages like:
 
@@ -14,7 +14,7 @@ Having the wallet available as docker container has some advantages like:
 
 We use `docker-compose` to build the images. Clone this repository and then:
 
-    cd docker-bitcoinabc
+    cd docker-bitcoin-wallet
     sudo docker-compose -f docker-compose-dev.yml build
 
 ## How to run the Wallet
@@ -28,16 +28,16 @@ The wallet can be run in two ways:
 
 The `docker-compose` file mounts your X11 session's socket (/tmp/.X11-unix) so the container can connect back to your X server. To start the wallet with `docker-compose`:
 
-    sudo docker-compose -p bitcoinabc-wallet up
+    sudo docker-compose -p bitcoin-wallet up
 
 To start the wallet in production mode the the `-d` parameter to the previous
 command:
 
-    sudo docker-compose -p bitcoinabc-wallet up -d
+    sudo docker-compose -p bitcoin-wallet up -d
 
 You can see the container logs with this command:
 
-  sudo docker-compose -p bitcoinabc-wallet logs -f
+  sudo docker-compose -p bitcoin-wallet logs -f
 
 After the container finish starting up the wallet will show up in your
 screen.
@@ -48,7 +48,7 @@ This is useful to run the wallet (and leave it running if you want) on a remote 
 
 To run the wallet inside a web browser you need to define the environment variable `ENABLE_WEB_VIEW=yes`. Then start the wallet with `docker-compose` as before:
 
-    sudo docker-compose -p bitcoinabc-wallet up
+    sudo docker-compose -p bitcoin-wallet up
 
 After some minutes the wallet will be available in http://[host]:10000, were host is the server name or IP address of the server running the wallet container.
 
