@@ -1,4 +1,4 @@
-bitcoin-wallet
+
 # Unofficial Bitcoin core wallet GUI for docker
 
 Unofficial [bitcoin core](http://www.bitcoincore.org/) wallet GUI docker image to be run standalone or inside a browser window using [Xpra](https://www.xpra.org/).
