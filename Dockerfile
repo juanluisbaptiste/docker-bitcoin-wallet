@@ -1,5 +1,5 @@
-FROM juanluisbaptiste/xpra-base:latest
-MAINTAINER Juan Luis Baptiste <juan.baptiste@gmail.com>
+FROM gentoorax/xpra-base:latest
+MAINTAINER Chris Law <law1213@hotmail.com>
 ENV BTC_VERSION "0.15.1"
 ENV BTC_GUI_DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-0.15.1/bitcoin-${BTC_VERSION}-x86_64-linux-gnu.tar.gz
 COPY local-entrypoint.sh /
