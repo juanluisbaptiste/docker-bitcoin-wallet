@@ -1,7 +1,7 @@
 FROM juanluisbaptiste/xpra-base:latest
 MAINTAINER Juan Luis Baptiste <juan.baptiste@gmail.com>
-ENV BTC_VERSION "0.18.0"
-ENV BTC_GUI_DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-0.18.0/bitcoin-${BTC_VERSION}-x86_64-linux-gnu.tar.gz
+ENV BTC_VERSION "0.18.1"
+ENV BTC_GUI_DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-${BTC_VERSION}-x86_64-linux-gnu.tar.gz
 COPY local-entrypoint.sh /
 
 RUN apt-get update && \
