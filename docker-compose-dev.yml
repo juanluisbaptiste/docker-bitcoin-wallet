@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   wallet:
     image: juanluisbaptiste/bitcoin-wallet:latest
@@ -6,8 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: bitcoin-wallet
-    volumes_from:
-    - wallet-data
     environment:
       - ENABLE_WEB_VIEW=yes
       - DISPLAY=unix$DISPLAY
