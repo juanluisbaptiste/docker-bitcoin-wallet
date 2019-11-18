@@ -3,7 +3,7 @@ services:
   wallet:
     image: juanluisbaptiste/bitcoin-wallet:latest
     container_name: bitcoin-wallet
-       environment:
+    environment:
       - ENABLE_WEB_VIEW=yes
       - DISPLAY=unix$DISPLAY
       - DEBUG=yes
