@@ -1,7 +1,8 @@
 version: '2'
 services:
   wallet:
-    image: juanluisbaptiste/bitcoin-wallet:latest
+    image: gentoorax
+/bitcoin-wallet:latest
     container_name: bitcoin-wallet
     volumes_from:
     - wallet-data
@@ -10,11 +11,14 @@ services:
       - DISPLAY=unix$DISPLAY
       - DEBUG=yes
       - USER_UID=1026
+      - XPRA_USER=user 
+      - XPRA_PASSWORD=password
     network_mode: host
     # ports:
     #  - "10000:10000"
   wallet-data:
-    image: juanluisbaptiste/bitcoin-wallet:latest
+    image: gentoorax
+/bitcoin-wallet:latest
     container_name: wallet-data
     volumes:
     -  /tmp/.X11-unix:/tmp/.X11-unix

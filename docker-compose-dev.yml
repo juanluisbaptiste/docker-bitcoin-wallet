@@ -1,7 +1,8 @@
 version: '2'
 services:
   wallet:
-    image: juanluisbaptiste/bitcoin-wallet:latest
+    image: gentoorax
+/bitcoin-wallet:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,11 +13,14 @@ services:
       - ENABLE_WEB_VIEW=yes
       - DISPLAY=unix$DISPLAY
       - DEBUG=yes
+      - XPRA_USER=user 
+      - XPRA_PASSWORD=password
     network_mode: host
     # ports:
     #  - "10000:10000"
   wallet-data:
-    image: juanluisbaptiste/bitcoin-wallet:latest
+    image: gentoorax
+/bitcoin-wallet:latest
     container_name: wallet-data
     volumes:
     -  /tmp/.X11-unix:/tmp/.X11-unix
