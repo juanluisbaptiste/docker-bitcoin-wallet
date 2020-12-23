@@ -1,8 +1,7 @@
 version: '2'
 services:
   wallet:
-    image: gentoorax
-/bitcoin-wallet:latest
+    image: juanluisbaptiste/bitcoin-wallet:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -19,8 +18,7 @@ services:
     # ports:
     #  - "10000:10000"
   wallet-data:
-    image: gentoorax
-/bitcoin-wallet:latest
+    image: juanluisbaptiste/bitcoin-wallet:latest
     container_name: wallet-data
     volumes:
     -  /tmp/.X11-unix:/tmp/.X11-unix
